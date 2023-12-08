@@ -1,5 +1,12 @@
-pandas
 numpy
-seaborn
+pandas
+python-dotenv
+mysql-connector-python
+pymysql
 scikit-learn
--e .
+seaborn
+catboost
+xgboost
+mlflow
+dill
+#-e .
