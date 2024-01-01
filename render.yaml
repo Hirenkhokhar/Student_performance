@@ -1,0 +1,11 @@
+# render.yaml
+services:
+  - name: flask-app
+    envVars:
+      - key: FLASK_APP
+        value: app.py  # Specify the path to your main Flask file
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -w 4 -b 0.0.0.0:8080 app:app
+    envVars:
+      - key: RENDER_DEV_MODE
+        value: "1"  # Set to "1" if you want to run in development mode
